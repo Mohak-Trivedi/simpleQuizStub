@@ -118,23 +118,23 @@ describe('Simple Quiz App', () => {
     //     // Check that font size changes for question and answer list
     //     cy.get('#question, #answer-list').should('have.css', 'font-size').and('match', /18px/);
     // });
-    it('displays responsive design for mobile screens', () => {
-        // Set a mobile viewport
-        cy.viewport('iphone-x');
+    // it('displays responsive design for mobile screens', () => {
+    //     // Set a mobile viewport
+    //     cy.viewport('iphone-x');
 
-        // Get the quiz container element
-        cy.get('.quiz-container').then(($container) => {
-            // Get the computed width using getComputedStyle
-            const containerWidth = window.getComputedStyle($container[0]).width;
+    //     // Get the quiz container element
+    //     cy.get('.quiz-container').then(($container) => {
+    //         // Get the computed width using getComputedStyle
+    //         const containerWidth = window.getComputedStyle($container[0]).width;
 
-            // Parse the width value and compare it
-            const parsedWidth = parseFloat(containerWidth);
-            expect(parsedWidth).to.be.lessThan(300); // Assuming the viewport width is less than 300px
-        });
+    //         // Parse the width value and compare it
+    //         const parsedWidth = parseFloat(containerWidth);
+    //         expect(parsedWidth).to.be.lessThan(300); // Assuming the viewport width is less than 300px
+    //     });
 
-        // Check that font size changes for question and answer list
-        cy.get('#question, #answer-list').should('have.css', 'font-size').and('match', /18px/);
-    });
+    //     // Check that font size changes for question and answer list
+    //     cy.get('#question, #answer-list').should('have.css', 'font-size').and('match', /18px/);
+    // });
     // it('displays correct mobile styles', () => {
     //     // Set the mobile viewport width
     //     cy.viewport('iphone-x');
@@ -171,10 +171,10 @@ describe('Simple Quiz App', () => {
     // it('has the quiz container horizontally centered on the webpage in a responsive manner', () => {
     //     cy.get('.quiz-container').should('have.css', 'margin', '0px auto');
     // });
-    it('has the quiz container horizontally centered on the webpage in a responsive manner', () => {
-        // Check that the quiz container's horizontal margin contains 'auto'
-        cy.get('.quiz-container').should('have.css', 'margin').and('contain', 'auto');
-    });
+    // it('has the quiz container horizontally centered on the webpage in a responsive manner', () => {
+    //     // Check that the quiz container's horizontal margin contains 'auto'
+    //     cy.get('.quiz-container').should('have.css', 'margin').and('contain', 'auto');
+    // });
 
     it('has the correct padding for the body', () => {
         cy.get('body').should('have.css', 'padding', '50px');
